@@ -2,17 +2,19 @@
 
 import { useState } from 'react';
 import DetectMode from '../components/DetectMode';
+import SentenceMode from '../components/SentenceMode';
 import LearnMode from '../components/LearnMode';
 import GuideMode from '../components/GuideMode';
 
 const TABS = [
-  { key: 'detect', label: '📷 Detect Sign' },
-  { key: 'learn', label: '📚 Learn Sign' },
-  { key: 'guide', label: '📖 Gesture Guide' }
+  { key: 'sentence', label: '💬 Sentence' },
+  { key: 'detect', label: '📷 Detect' },
+  { key: 'learn', label: '📚 Learn' },
+  { key: 'guide', label: '📖 Guide' }
 ];
 
 export default function Home() {
-  const [mode, setMode] = useState('detect');
+  const [mode, setMode] = useState('sentence');
 
   return (
     <div className="app-container">
@@ -35,12 +37,13 @@ export default function Home() {
 
       <main className="main-content">
         {mode === 'detect' && <DetectMode />}
+        {mode === 'sentence' && <SentenceMode />}
         {mode === 'learn' && <LearnMode />}
         {mode === 'guide' && <GuideMode />}
       </main>
 
       <footer className="footer">
-        <p>Powered by MediaPipe Hands | Next.js | Deploy on Vercel</p>
+        <p>© 2025 kevinicky. All rights reserved.</p>
       </footer>
     </div>
   );
