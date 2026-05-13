@@ -6,8 +6,8 @@ A real-time web app that detects hand gestures via camera and translates them in
 
 - **Two-way translation**: Hand Sign ↔ English
 - **Sentence Builder**: Chain gestures into full sentences (e.g., "Hello I Love You")
+- **ASL Finger Spelling**: Real-time A-Z letter detection for spelling any word
 - **Custom word input**: Type names or words not in gesture dictionary
-- **ASL Finger Spelling**: Shows how to spell any word letter by letter
 - **Adjustable delay**: 1-10 second cooldown between detections (3s default)
 - **Real-time hand detection** using MediaPipe Hands
 - **Skeleton visualization** with red joint points and green connecting lines
@@ -34,10 +34,11 @@ Or connect your GitHub repo at [vercel.com](https://vercel.com).
 
 ## Modes
 
-1. **💬 Sentence** (default) — Build sentences by detecting gestures, add custom words, see ASL spelling
-2. **📷 Detect** — Single gesture detection with translation history
-3. **📚 Learn** — Type English text, see how to make the sign with visual guide
-4. **📖 Guide** — Browse all supported gestures with descriptions
+1. **💬 Sentence** (default) — Build sentences by detecting gestures, add custom words
+2. **🔤 ASL** — Real-time ASL finger spelling (A-Z), spell any word letter by letter
+3. **📷 Detect** — Single gesture detection with translation history
+4. **📚 Learn** — Type English text, see how to make the sign with visual guide
+5. **📖 Guide** — Browse all supported gestures with descriptions
 
 ## Gesture → Word Map
 
@@ -56,13 +57,14 @@ Or connect your GitHub repo at [vercel.com](https://vercel.com).
 | 3️⃣ Three | Three |
 | 🖖 Four | Four |
 
-## Sentence Mode
+## ASL Finger Spelling
 
-- Detect a gesture → word is auto-added to sentence
-- 2-second cooldown prevents duplicate detections
-- Type custom words for names (e.g., "Kevin", "Nicky")
-- Toggle ASL alphabet to see finger spelling for each letter
-- Undo, Clear, and Copy sentence buttons
+Supports 22 static letters (A-Z minus J/Z which require movement):
+
+| Letters | Description |
+|---------|-------------|
+| A, B, C, D, E, F, G, H, I, K, L | Static hand shapes |
+| M, N, O, R, S, T, U, V, W, X, Y | Static hand shapes |
 
 ## Tech Stack
 

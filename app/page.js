@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import DetectMode from '../components/DetectMode';
 import SentenceMode from '../components/SentenceMode';
+import ASLMode from '../components/ASLMode';
 import LearnMode from '../components/LearnMode';
 import GuideMode from '../components/GuideMode';
 
 const TABS = [
   { key: 'sentence', label: '💬 Sentence' },
+  { key: 'asl', label: '🔤 ASL' },
   { key: 'detect', label: '📷 Detect' },
   { key: 'learn', label: '📚 Learn' },
   { key: 'guide', label: '📖 Guide' }
@@ -36,8 +38,9 @@ export default function Home() {
       </nav>
 
       <main className="main-content">
-        {mode === 'detect' && <DetectMode />}
         {mode === 'sentence' && <SentenceMode />}
+        {mode === 'asl' && <ASLMode />}
+        {mode === 'detect' && <DetectMode />}
         {mode === 'learn' && <LearnMode />}
         {mode === 'guide' && <GuideMode />}
       </main>
